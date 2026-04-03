@@ -80,7 +80,7 @@ a:focus-visible{
   font-size: 14px;
   font-weight: 750;
   letter-spacing: -0.01em;
-  color: var(--text);
+  color: var(--accent);
 }
 
 .nav{
@@ -89,14 +89,15 @@ a:focus-visible{
   gap: 14px;
 }
 
+/* ✅ Header Home/Blog/etc. color set to #2596be */
 .nav a{
   font-size: 14px;
-  color: var(--muted);
-  font-weight: 650;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .nav a:hover{
-  color: var(--text);
+  opacity: 0.8;
 }
 
 /* =========================
@@ -201,7 +202,7 @@ a:focus-visible{
   place-items:center;
   font-weight: 900;
   font-size: 12px;
-  color: #0f172a;
+  color: var(--accent);
   flex: 0 0 auto;
   margin-top: 2px;
 }
@@ -221,7 +222,7 @@ a:focus-visible{
 }
 
 /* =========================
-   ABOUT SECTION (LEFT + RIGHT CARD)
+   ABOUT SECTION
 ========================= */
 .about{
   padding: 36px 0 70px;
@@ -266,3 +267,132 @@ a:focus-visible{
 .chips{
   display:flex;
   flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 10%, white);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
+  color: #0f172a;
+}
+
+/* =========================
+   PROFILE CARD (circle inside circle + AM in #2596be)
+========================= */
+.profile-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 86px;
+}
+
+.profile-top{
+  display:flex;
+  justify-content:flex-start;
+  margin-bottom: 12px;
+}
+
+/* Outer circle */
+.avatar-outer{
+  width: 86px;
+  height: 86px;
+  border-radius: 999px;
+  border: 2px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+
+/* Inner circle */
+.avatar-inner{
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  border: 2px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--accent); /* ✅ AM color */
+  background: rgba(255,255,255,0.65);
+}
+
+.profile-name{
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin: 8px 0 0;
+}
+
+.profile-role{
+  font-size: 18px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.profile-links-inline{
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.profile-links-inline a{
+  color: var(--text);
+  font-weight: 600;
+}
+
+.profile-links-inline a:hover{
+  text-decoration: underline;
+}
+
+.profile-copyright{
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+/* =========================
+   FOOTER + ICON BUTTONS
+========================= */
+.footer{
+  border-top: 1px solid var(--border);
+  padding: 22px 0 28px;
+}
+
+.footer-row{
+  display:flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-name{
+  font-weight: 900;
+}
+
+.footer-icons{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+}
+
+/* Icon buttons */
+.icon-btn{
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, white);
+  display: grid;
+  place-items: center;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  box-shadow: var(--shadow);
+}
+
+.icon-btn:hover{
