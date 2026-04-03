@@ -1,72 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aun | Oracle APEX Developer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aun | Oracle APEX Developer</title>
+  <meta name="description" content="Aun — Oracle APEX Developer building scalable workflow automation and enterprise-ready applications using SQL and PL/SQL." />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header class="header">
-    <div class="handle">@aunapex</div>
-    <nav class="nav">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">@aunapex</a>
+
+      <nav class="nav">
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+      </nav>
+    </div>
+  </header>
 
-<section class="hero-left">
-    <h1>Hello, I'm <span>Aun</span></h1>
+  <main class="container">
 
-    <p class="subtitle">
-        I’m an Oracle APEX Developer passionate about building clean, scalable, 
-        and enterprise-ready applications. My work focuses on workflow automation, 
-        multi-level approval systems, and designing user experiences that simplify 
-        complex business processes. I enjoy solving real-world problems using SQL, 
-        PL/SQL, and modern APEX design patterns. Every project I create is built 
+    <!-- HERO -->
+    <section class="hero">
+      <p class="muted">Hello, I'm</p>
+      <h1>Aun</h1>
+
+      <p class="subtitle">
+        I’m an Oracle APEX Developer passionate about building clean, scalable,
+        and enterprise-ready applications. My work focuses on workflow automation,
+        multi-level approval systems, and designing user experiences that simplify
+        complex business processes. I enjoy solving real-world problems using SQL,
+        PL/SQL, and modern APEX design patterns. Every project I create is built
         with clarity, structure, and long-term maintainability in mind.
-    </p>
-</section>
+      </p>
 
-<section class="card-grid">
+      <div class="hero-meta">
+        <span class="pill soft">Oracle APEX</span>
+        <span class="pill soft">SQL</span>
+        <span class="pill soft">PL/SQL</span>
+        <span class="pill soft">Workflows</span>
+      </div>
+    </section>
 
-    <div class="big-card">
-        <div class="card-image"></div>
-        <div class="card-text">
-            <h2>SQL Development</h2>
+    <!-- SKILLS / HIGHLIGHTS -->
+    <section class="section">
+      <div class="section-head">
+        <h2>What I Do</h2>
+        <p class="muted">Core areas I build and optimize.</p>
+      </div>
+
+      <section class="card-grid">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">SQL</div>
+          <div class="card-text">
+            <h3>SQL Development</h3>
             <p>Advanced SQL queries, performance tuning, indexing, and enterprise data modeling.</p>
-        </div>
-    </div>
+          </div>
+        </article>
 
-    <div class="big-card">
-        <div class="card-image"></div>
-        <div class="card-text">
-            <h2>Oracle APEX Applications</h2>
-            <p>Building secure, scalable APEX apps with modern UI, authentication, and workflow logic.</p>
-        </div>
-    </div>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">APEX</div>
+          <div class="card-text">
+            <h3>Oracle APEX Applications</h3>
+            <p>Secure, scalable APEX apps with modern UI, authentication, and workflow logic.</p>
+          </div>
+        </article>
 
-    <div class="big-card">
-        <div class="card-image"></div>
-        <div class="card-text">
-            <h2>Workflow Automation</h2>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">WF</div>
+          <div class="card-text">
+            <h3>Workflow Automation</h3>
             <p>Dynamic approvals, multi-role routing, notifications, and automation logic.</p>
-        </div>
-    </div>
+          </div>
+        </article>
 
-    <div class="big-card">
-        <div class="card-image"></div>
-        <div class="card-text">
-            <h2>Dashboards & Analytics</h2>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">BI</div>
+          <div class="card-text">
+            <h3>Dashboards &amp; Analytics</h3>
             <p>Interactive dashboards, KPIs, charts, and real-time reporting systems.</p>
-        </div>
-    </div>
+          </div>
+        </article>
+      </section>
+    </section>
 
-</section>
+    <!-- ABOUT (LEFT TEXT + RIGHT PROFILE CARD like your screenshot) -->
+    <section class="about">
+      <div class="about-grid">
+
+        <!-- LEFT -->
+        <div class="about-left">
+          <p class="eyebrow">GET TO KNOW ME</p>
+          <h2 class="about-title">About Me</h2>
+
+          <div class="about-body">
+            <p>
+              I build enterprise-ready Oracle APEX applications focused on clarity, performance,
+              and long-term maintainability. I enjoy turning complex business processes into clean,
+              user-friendly workflows with strong security.
+            </p>
+
+            <p>
+              My work often includes multi-level approval systems, role-based routing, notifications,
+              and reporting dashboards that help teams operate faster with confidence.
+            </p>
+
+            <p>
+              I love working at the intersection of product and data — translating requirements into
+              scalable solutions using SQL, PL/SQL, and modern APEX design patterns.
+            </p>
+          </div>
+
+          <hr class="divider" />
+
+          <h3 class="chips-title">What I Work With</h3>
+          <div class="chips">
+            <span class="chip">Oracle APEX</span>
+            <span class="chip">SQL</span>
+            <span class="chip">PL/SQL</span>
+            <span class="chip">Workflow Automation</span>
+            <span class="chip">Role-Based Access</span>
+            <span class="chip">Dashboards</span>
+            <span class="chip">Performance Tuning</span>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="profile-card">
+          <div class="profile-top">
+            <!-- Option A: Initials (no image required) -->
+            <div class="avatar" aria-hidden="true">AM</div>
+
+            <!-- Option B: Use yourclass="profile-name">Aun</div>
+          <div class="profile-role">Oracle APEX Developer</div>
+
+          <div class="profile-meta">
+            <a class="profile-handle" href="https://github.com/yourusername" target="_blank" rel="noreferrer">@aunapex</a>
+            <span class="dot">•</span>
+            <span class="muted">everywhere</span>
+          </div>
+
+          <div class="profile-links">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="mailto:you@email.com">Email</a>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-row">
+      <div class="footer-left">
+        <div class="footer-avatar" aria-hidden="true"></div>
+        <div>
+          <div class="footer-name">Aun</div>
+          <div class="muted small">Oracle APEX Developer</div>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <nav class="footer-links small">
+          <a href="https://twitter.com/yourhandle" target="_blank" rel="noreferrer">Twitter</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+        <div class="muted small">© <span id="year"></span></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
