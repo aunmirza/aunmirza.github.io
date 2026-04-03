@@ -56,7 +56,7 @@ body {
     line-height: 1.7;
 }
 
-/* CARD GRID */
+/* CARD GRID (2x2 layout) */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -67,13 +67,13 @@ body {
 /* BIG CARD */
 .big-card {
     display: flex;
-    background: #2596be;
+    background: #2596be; /* CARD COLOR */
     border-radius: 14px;
     padding: 25px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     transition: 0.3s ease;
     min-height: 220px;
-    color: white;
+    color: white; /* TEXT VISIBLE ON BLUE */
 }
 
 .big-card:hover {
@@ -90,33 +90,6 @@ body {
     margin-right: 25px;
 }
 
-/* PROFILE CARD */
-.profile-card {
-    align-items: center;
-}
-
-/* Circle Image with AM */
-.profile-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 25px;
-}
-
-.circle {
-    width: 150px;
-    height: 150px;
-    background: white;
-    color: #2596be;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 48px;
-    font-weight: 700;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
 /* TEXT INSIDE CARD */
 .card-text h2 {
     margin: 0;
@@ -128,35 +101,6 @@ body {
     margin-top: 12px;
     font-size: 17px;
     line-height: 1.6;
-}
-
-/* FOOTER */
-.footer {
-    background: #2596be;
-    padding: 40px 0;
-    text-align: center;
-    margin-top: 80px;
-    color: white;
-}
-
-.footer-social {
-    margin-bottom: 15px;
-}
-
-.footer .social {
-    color: white;
-    font-size: 26px;
-    margin: 0 12px;
-    transition: 0.3s ease;
-}
-
-.footer .social:hover {
-    opacity: 0.8;
-}
-
-.footer-text {
-    font-size: 15px;
-    opacity: 0.9;
 }
 
 /* RESPONSIVE */
@@ -178,11 +122,6 @@ body {
     }
 
     .card-image {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-
-    .profile-image {
         margin-right: 0;
         margin-bottom: 15px;
     }
