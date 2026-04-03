@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: #E9E6E7;   /* NEW BACKGROUND COLOR */
+    background: #E9E6E7;
     color: #222;
 }
 
@@ -33,11 +33,11 @@ body {
     opacity: 0.7;
 }
 
-/* CENTER-LEFT HERO */
+/* HERO SECTION */
 .hero-left {
     margin-top: 120px;
-    padding-left: 120px;   /* moves hero to center-left */
-    max-width: 700px;      /* keeps text readable */
+    padding-left: 120px;
+    max-width: 700px;
 }
 
 .hero-left h1 {
@@ -54,41 +54,53 @@ body {
     font-size: 20px;
     color: #555;
     line-height: 1.7;
-    margin-top: 10px;
 }
 
-/* FEATURE BLOCKS */
-.features {
-    display: flex;
+/* CARD GRID (2x2 layout) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    margin-top: 80px;
-    padding: 0 60px 100px 60px;
+    padding: 80px 120px;
 }
 
-.feature {
+/* BIG CARD */
+.big-card {
+    display: flex;
     background: #ffffff;
-    padding: 30px;
-    width: 300px;
-    border-radius: 12px;
+    border-radius: 14px;
+    padding: 25px;
     border-left: 6px solid #0047AB;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     transition: 0.3s ease;
+    min-height: 180px;
 }
 
-.feature:hover {
+.big-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
-.feature h2 {
-    margin-top: 0;
-    color: #0047AB;
+/* IMAGE PLACEHOLDER */
+.card-image {
+    width: 120px;
+    height: 120px;
+    background: #dcdcdc;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* TEXT INSIDE CARD */
+.card-text h2 {
+    margin: 0;
     font-size: 22px;
+    color: #0047AB;
 }
 
-.feature p {
-    color: #555;
+.card-text p {
+    margin-top: 10px;
     font-size: 16px;
+    color: #555;
     line-height: 1.5;
 }
 
@@ -97,17 +109,21 @@ body {
     .hero-left {
         padding-left: 30px;
         padding-right: 30px;
-        margin-top: 80px;
     }
 
-    .features {
+    .card-grid {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+    }
+
+    .big-card {
         flex-direction: column;
         align-items: center;
-        padding: 40px 30px 80px 30px;
+        text-align: center;
     }
 
-    .feature {
-        width: 100%;
-        max-width: 400px;
+    .card-image {
+        margin-right: 0;
+        margin-bottom: 15px;
     }
 }
