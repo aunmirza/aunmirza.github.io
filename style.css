@@ -18,13 +18,13 @@ body {
 .handle {
     font-size: 18px;
     font-weight: 600;
-    color: #0047AB;
+    color: #fcfbf9;
 }
 
 .nav a {
     margin-left: 28px;
     text-decoration: none;
-    color: #0047AB;
+    color: #fcfbf9;
     font-weight: 600;
     font-size: 16px;
 }
@@ -47,7 +47,7 @@ body {
 }
 
 .hero-left h1 span {
-    color: #0047AB;
+    color: #fcfbf9;
 }
 
 .subtitle {
