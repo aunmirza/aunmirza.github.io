@@ -1,128 +1,268 @@
-/* GLOBAL */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: #fcfbf9;
-    color: #222;
+/* =========================
+   TOKENS
+========================= */
+:root{
+  --bg:#fcfbf9;
+  --text:#111827;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --card:#ffffff;
+  --accent:#2596be;
+
+  --radius:18px;
+  --shadow:0 1px 2px rgba(0,0,0,.06);
+  --shadowHover:0 10px 24px rgba(0,0,0,.08);
+
+  --max:820px;
 }
 
-/* HEADER */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 28px 60px;
+/* =========================
+   GLOBAL
+========================= */
+*{ box-sizing:border-box; }
+html, body{ height:100%; }
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
 }
 
-.handle {
-    font-size: 18px;
-    font-weight: 600;
-    color: #2596be;
+a{
+  color: inherit;
+  text-decoration: none;
 }
 
-.nav a {
-    margin-left: 28px;
-    text-decoration: none;
-    color: #2596be;
-    font-weight: 600;
-    font-size: 16px;
+a:focus-visible{
+  outline: 3px solid color-mix(in srgb, var(--accent) 55%, white);
+  outline-offset: 3px;
+  border-radius: 10px;
 }
 
-.nav a:hover {
-    opacity: 0.7;
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 18px;
 }
 
-/* HERO SECTION */
-.hero-left {
-    margin-top: 120px;
-    padding-left: 120px;
-    max-width: 700px;
+.muted{ color: var(--muted); }
+.small{ font-size: 12px; }
+
+.divider{
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 18px 0;
 }
 
-.hero-left h1 {
-    font-size: 54px;
-    font-weight: 700;
-    margin-bottom: 20px;
+/* =========================
+   HEADER
+========================= */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--border);
+  background: rgba(252,251,249,.72);
+  backdrop-filter: blur(10px);
 }
 
-.hero-left h1 span {
-    color: #2596be;
+.header-row{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 14px 0;
+  gap: 16px;
 }
 
-.subtitle {
-    font-size: 20px;
-    color: #555;
-    line-height: 1.7;
+.brand{
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  color: var(--text);
 }
 
-/* CARD GRID (2x2 layout) */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    padding: 80px 120px;
+.nav{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 14px;
 }
 
-/* BIG CARD */
-.big-card {
-    display: flex;
-    background: #2596be; /* CARD COLOR */
-    border-radius: 14px;
-    padding: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    transition: 0.3s ease;
-    min-height: 220px;
-    color: white; /* TEXT VISIBLE ON BLUE */
+.nav a{
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 650;
 }
 
-.big-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 35px rgba(0,0,0,0.35);
+.nav a:hover{
+  color: var(--text);
 }
 
-/* IMAGE PLACEHOLDER */
-.card-image {
-    width: 150px;
-    height: 150px;
-    background: rgba(255,255,255,0.4);
-    border-radius: 12px;
-    margin-right: 25px;
+/* =========================
+   HERO
+========================= */
+.hero{
+  padding: 54px 0 22px;
 }
 
-/* TEXT INSIDE CARD */
-.card-text h2 {
-    margin: 0;
-    font-size: 26px;
-    font-weight: 700;
+.hero h1{
+  margin: 6px 0 0;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
 }
 
-.card-text p {
-    margin-top: 12px;
-    font-size: 17px;
-    line-height: 1.6;
+.subtitle{
+  margin-top: 14px;
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #374151;
+  max-width: 74ch;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .hero-left {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .card-grid {
-        grid-template-columns: 1fr;
-        padding: 40px 30px;
-    }
-
-    .big-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .card-image {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
+.hero-meta{
+  margin-top: 16px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
+
+.pill{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+
+.pill.soft{
+  background: color-mix(in srgb, var(--accent) 10%, white);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
+  color: #0f172a;
+}
+
+/* =========================
+   SECTION HEAD
+========================= */
+.section{
+  padding: 18px 0 40px;
+}
+
+.section-head{
+  margin: 12px 0 12px;
+}
+
+.section-head h2{
+  margin:0;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.section-head p{
+  margin:6px 0 0;
+}
+
+/* =========================
+   SKILL CARDS
+========================= */
+.card-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding-top: 10px;
+}
+
+.card{
+  display:flex;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  min-height: 160px;
+}
+
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadowHover);
+  border-color: color-mix(in srgb, var(--accent) 25%, var(--border));
+}
+
+.card-icon{
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent) 12%, white);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
+  display:grid;
+  place-items:center;
+  font-weight: 900;
+  font-size: 12px;
+  color: #0f172a;
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.card-text h3{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.card-text p{
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* =========================
+   ABOUT SECTION (LEFT + RIGHT CARD)
+========================= */
+.about{
+  padding: 36px 0 70px;
+}
+
+.about-grid{
+  display: grid;
+  grid-template-columns: 1.45fr 0.9fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.eyebrow{
+  margin: 0 0 10px;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.about-title{
+  margin: 0 0 14px;
+  font-size: 24px;
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+.about-body p{
+  margin: 0 0 12px;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #374151;
+}
+
+.chips-title{
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.chips{
+  display:flex;
+  flex-wrap: wrap;
