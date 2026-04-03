@@ -1,20 +1,20 @@
-/* Global Styles */
+/* Global */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #f8f9fa;
+    background: #f5f7fa;
     color: #333;
 }
 
-/* Navigation Bar */
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     background: white;
-    border-bottom: 2px solid #0047AB;
+    border-bottom: 3px solid #0047AB;
 }
 
 nav .logo {
@@ -38,7 +38,8 @@ nav .nav-links a:hover {
 /* Hero Section */
 .hero {
     text-align: center;
-    margin-top: 120px;
+    margin-top: 80px;
+    margin-bottom: 60px;
 }
 
 .hero h1 {
@@ -50,4 +51,50 @@ nav .nav-links a:hover {
 .hero p {
     font-size: 20px;
     color: #555;
+}
+
+/* Cards Section */
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 0 40px 60px 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 6px solid #0047AB;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #0047AB;
+    font-size: 22px;
+}
+
+.card p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .cards-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-section {
+        grid-template-columns: 1fr;
+    }
 }
