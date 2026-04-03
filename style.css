@@ -86,7 +86,6 @@ a:focus-visible{
   gap: 14px;
 }
 
-/* header link color = #2596be */
 .nav a{
   font-size: 14px;
   color: var(--accent);
@@ -275,124 +274,135 @@ a:focus-visible{
 }
 
 /* =========================
-   PROFILE CARD (ONLY AM + TEXT)
+   PROFILE CARD (UNCHANGED — YOUR PREVIOUS AM CARD)
 ========================= */
 .profile-card{
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 26px 22px;
+  border-radius: var(--radius);
+  padding: 18px;
   box-shadow: var(--shadow);
+  position: sticky;
+  top: 86px;
 }
 
-.profile-badge{
-  width: 74px;
-  height: 74px;
+.profile-top{
+  display:flex;
+  justify-content:flex-start;
+  margin-bottom: 12px;
+}
+
+/* Outer circle */
+.avatar-outer{
+  width: 86px;
+  height: 86px;
   border-radius: 999px;
+  border: 2px solid color-mix(in srgb, var(--accent) 35%, var(--border));
   display: grid;
   place-items: center;
+  background: transparent;
+}
 
-  background: var(--accent); /* circle color */
-  color: #ffffff;            /* AM color */
-
+/* Inner circle */
+.avatar-inner{
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  border: 2px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  display: grid;
+  place-items: center;
   font-weight: 900;
-  font-size: 22px;
   letter-spacing: -0.02em;
+  color: var(--accent);
+  background: rgba(255,255,255,0.65);
 }
 
 .profile-name{
-  margin-top: 16px;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: var(--text);
+  margin: 8px 0 0;
 }
 
 .profile-role{
-  margin-top: 6px;
   font-size: 18px;
   color: var(--muted);
+  margin-top: 6px;
+}
+
+.profile-copyright{
+  margin-top: 10px;
+  font-size: 13px;
 }
 
 /* =========================
-   FOOTER (ICONS + LABELS)
+   FOOTER (SMALL + ALIGNED + ICONS + LABELS)
 ========================= */
 .footer{
   border-top: 1px solid var(--border);
-  padding: 22px 0 28px;
+  padding: 12px 0;     /* small */
+  margin-top: 28px;
 }
 
 .footer-row{
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center; /* align perfectly */
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
 }
 
 .footer-social{
-  display:flex;
+  display: flex;
+  align-items: center;
   gap: 14px;
-  align-items:center;
   flex-wrap: wrap;
 }
 
 .social-link{
-  display:inline-flex;
-  align-items:center;
-  gap: 10px;
-  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
   font-weight: 800;
-  font-size: 13px;
-}
-
-.social-link:hover .social-label{
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.social-btn{
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-
   color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 10%, white);
-  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--border));
-  box-shadow: var(--shadow);
-
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+  line-height: 1;
+  padding: 4px 0; /* keeps footer short */
 }
 
-.social-link:hover .social-btn{
-  transform: translateY(-2px);
-  box-shadow: var(--shadowHover);
-  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
-  background: color-mix(in srgb, var(--accent) 14%, white);
+.social-link:hover{
+  opacity: 0.85;
 }
 
 .social-icon{
-  width: 18px;
-  height: 18px;
+  width: 14px;   /* small icon */
+  height: 14px;
   display: block;
+  flex: 0 0 auto;
 }
 
 .social-label{
-  color: var(--accent);
-  font-weight: 900;
+  text-decoration: none;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+.footer-left{
+  line-height: 1;
+}
+
 @media (max-width: 860px){
   .card-grid{ grid-template-columns: 1fr; }
   .about-grid{ grid-template-columns: 1fr; }
-  .footer-row{ flex-direction: column; align-items: flex-start; }
+  .profile-card{ position: static; }
 }
 
-/* Accessibility: reduce motion */
+@media (max-width: 560px){
+  .footer-row{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+/* Accessibility */
 @media (prefers-reduced-motion: reduce){
   *{
     transition: none !important;
