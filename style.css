@@ -3,27 +3,25 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #f5f7fa;
+    background: #ffffff;
     color: #333;
 }
 
-/* Navigation */
-nav {
+/* Top Bar */
+.top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background: white;
-    border-bottom: 3px solid #0047AB;
+    padding: 25px 40px;
 }
 
-nav .logo {
-    font-size: 24px;
+.handle {
+    font-size: 18px;
     font-weight: bold;
     color: #0047AB;
 }
 
-nav .nav-links a {
+nav a {
     margin-left: 25px;
     text-decoration: none;
     color: #0047AB;
@@ -31,7 +29,7 @@ nav .nav-links a {
     font-size: 16px;
 }
 
-nav .nav-links a:hover {
+nav a:hover {
     opacity: 0.7;
 }
 
@@ -40,39 +38,46 @@ nav .nav-links a:hover {
     text-align: center;
     margin-top: 80px;
     margin-bottom: 60px;
+    padding: 0 20px;
 }
 
 .hero h1 {
     font-size: 48px;
-    color: #0047AB;
     margin-bottom: 10px;
+    color: #333;
+}
+
+.hero h1 span {
+    color: #0047AB;
 }
 
 .hero p {
     font-size: 20px;
     color: #555;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* Cards Section */
-.cards-section {
+.cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     padding: 0 40px 60px 40px;
 }
 
 .card {
-    background: white;
+    background: #f7f9fc;
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 12px;
     border-left: 6px solid #0047AB;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
     transition: 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .card h2 {
@@ -88,13 +93,7 @@ nav .nav-links a:hover {
 
 /* Responsive */
 @media (max-width: 900px) {
-    .cards-section {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .cards-section {
+    .cards {
         grid-template-columns: 1fr;
     }
 }
