@@ -60,7 +60,7 @@ body {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 40px;
     padding: 80px 120px;
 }
 
@@ -69,39 +69,39 @@ body {
     display: flex;
     background: #ffffff;
     border-radius: 14px;
-    padding: 25px;
-    border-left: 6px solid #0047AB;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 30px;
+    border: 2px solid #d0d0d0; /* makes card visible */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* stronger shadow */
     transition: 0.3s ease;
-    min-height: 180px;
+    min-height: 200px;
 }
 
 .big-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.22);
 }
 
 /* IMAGE PLACEHOLDER */
 .card-image {
-    width: 120px;
-    height: 120px;
-    background: #dcdcdc;
+    width: 140px;
+    height: 140px;
+    background: #cfcfcf;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 /* TEXT INSIDE CARD */
 .card-text h2 {
     margin: 0;
-    font-size: 22px;
+    font-size: 24px;
     color: #0047AB;
 }
 
 .card-text p {
-    margin-top: 10px;
-    font-size: 16px;
+    margin-top: 12px;
+    font-size: 17px;
     color: #555;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* RESPONSIVE */
