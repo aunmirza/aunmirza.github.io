@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aun | Oracle APEX Developer</title>
-  <meta name="description" content="Aun — Oracle APEX Developer building workflow automation and enterprise-ready apps with SQL and PL/SQL." />
+  <title>Aun | Data Engineering • Data Science • Oracle APEX</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -13,15 +12,19 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container header-row">
+
       <a class="brand" href="index.html">@aunmirza</a>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html">About</a>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
         <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
+
+      <!-- THEME TOGGLE -->
+      <button id="themeToggle" class="theme-toggle">Light / Dark</button>
+
     </div>
   </header>
 
@@ -30,26 +33,26 @@
     <!-- HERO -->
     <section class="hero">
       <p class="muted">Hello, I'm</p>
-      <h1>Aun</h1>
+      <h1 class="hero-title">
+        Aun — Building <span>Data‑Driven Solutions</span>
+      </h1>
 
       <p class="subtitle">
-        I’m an Oracle APEX Developer passionate about building clean, scalable,
-        and enterprise-ready applications. My work focuses on workflow automation,
-        multi-level approval systems, and designing user experiences that simplify
-        complex business processes. I enjoy solving real-world problems using SQL,
-        PL/SQL, and modern APEX design patterns. Every project I create is built
-        with clarity, structure, and long-term maintainability in mind.
+        I work across <strong>Data Engineering</strong>, <strong>Data Science</strong>, and
+        <strong>Oracle APEX</strong> to build clean, scalable, and enterprise‑ready systems.
+        I specialize in workflow automation, multi‑level approvals, and transforming complex
+        business processes into intuitive applications.
       </p>
 
       <div class="hero-meta">
+        <span class="pill soft">Data Engineering</span>
+        <span class="pill soft">Data Science</span>
         <span class="pill soft">Oracle APEX</span>
-        <span class="pill soft">SQL</span>
-        <span class="pill soft">PL/SQL</span>
-        <span class="pill soft">Workflows</span>
+        <span class="pill soft">Automation</span>
       </div>
     </section>
 
-    <!-- SKILLS / HIGHLIGHTS -->
+    <!-- SKILLS -->
     <section class="section">
       <div class="section-head">
         <h2>What I Do</h2>
@@ -58,63 +61,59 @@
 
       <section class="card-grid">
         <article class="card">
-          <div class="card-icon" aria-hidden="true">SQL</div>
+          <div class="card-icon">SQL</div>
           <div class="card-text">
-            <h3>SQL Development</h3>
-            <p>Advanced SQL queries, performance tuning, indexing, and enterprise data modeling.</p>
+            <h3>Data Engineering</h3>
+            <p>ETL/ELT pipelines, modeling, warehousing, and scalable data architecture.</p>
           </div>
         </article>
 
         <article class="card">
-          <div class="card-icon" aria-hidden="true">APEX</div>
+          <div class="card-icon">ML</div>
           <div class="card-text">
-            <h3>Oracle APEX Applications</h3>
-            <p>Secure, scalable APEX apps with modern UI, authentication, and workflow logic.</p>
+            <h3>Data Science</h3>
+            <p>Feature engineering, model training, evaluation, and real‑world deployment.</p>
           </div>
         </article>
 
         <article class="card">
-          <div class="card-icon" aria-hidden="true">WF</div>
+          <div class="card-icon">APEX</div>
           <div class="card-text">
-            <h3>Workflow Automation</h3>
-            <p>Dynamic approvals, multi-role routing, notifications, and automation logic.</p>
+            <h3>Oracle APEX Apps</h3>
+            <p>Secure, modern, data‑driven applications with workflows and dashboards.</p>
           </div>
         </article>
 
         <article class="card">
-          <div class="card-icon" aria-hidden="true">BI</div>
+          <div class="card-icon">UX</div>
           <div class="card-text">
-            <h3>Dashboards &amp; Analytics</h3>
-            <p>Interactive dashboards, KPIs, charts, and real-time reporting systems.</p>
+            <h3>Dashboards & Analytics</h3>
+            <p>Interactive dashboards, KPIs, and real‑time reporting systems.</p>
           </div>
         </article>
       </section>
     </section>
 
-    <!-- ABOUT (LEFT TEXT + RIGHT PROFILE CARD) -->
+    <!-- ABOUT -->
     <section class="about">
       <div class="about-grid">
 
-        <!-- LEFT -->
         <div class="about-left">
           <p class="eyebrow">GET TO KNOW ME</p>
           <h2 class="about-title">About Me</h2>
 
           <div class="about-body">
             <p>
-              I build enterprise-ready Oracle APEX applications focused on clarity, performance,
-              and long-term maintainability. I enjoy turning complex business processes into clean,
-              user-friendly workflows with strong security.
+              I build enterprise‑ready applications and data systems focused on clarity,
+              performance, and long‑term maintainability.
             </p>
-
             <p>
-              My work often includes multi-level approval systems, role-based routing, notifications,
-              and reporting dashboards that help teams operate faster with confidence.
+              My work includes multi‑level approvals, workflow routing, notifications,
+              dashboards, and automation logic that helps teams operate faster.
             </p>
-
             <p>
-              I love working at the intersection of product and data — translating requirements into
-              scalable solutions using SQL, PL/SQL, and modern APEX design patterns.
+              I love working at the intersection of product and data — translating
+              requirements into scalable solutions using SQL, PL/SQL, and modern APEX patterns.
             </p>
           </div>
 
@@ -125,24 +124,20 @@
             <span class="chip">Oracle APEX</span>
             <span class="chip">SQL</span>
             <span class="chip">PL/SQL</span>
-            <span class="chip">Workflow Automation</span>
-            <span class="chip">Role-Based Access</span>
+            <span class="chip">Data Engineering</span>
+            <span class="chip">Machine Learning</span>
             <span class="chip">Dashboards</span>
-            <span class="chip">Performance Tuning</span>
+            <span class="chip">Workflow Automation</span>
           </div>
         </div>
 
-        <!-- RIGHT: PROFILE CARD (KEEPING YOUR PREVIOUS AM CARD EXACTLY) -->
         <aside class="profile-card">
           <div class="profile-top">
-            <div class="avatar-outer" aria-hidden="true">
+            <div class="avatar-outer">
               <div class="avatar-inner">AM</div>
             </div>
           </div>
-
-          <div class="profile-role">Oracle APEX Developer</div>
-
-         
+          <div class="profile-role">Data Engineer & APEX Developer</div>
         </aside>
 
       </div>
@@ -150,36 +145,37 @@
 
   </main>
 
-  <!-- FOOTER (SMALL, ALIGNED, ICONS + LABELS) -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-row">
+      <span class="muted small">© <span id="year"></span> Aun — All rights reserved.</span>
 
-    
-
-      <nav class="footer-social" aria-label="Footer social links">
-        <a class="social-link" href="https://twitter.com/yourhandle" target="_blank" rel="noopener">
-          
-          <span class="social-label">Twitter</span>
-        </a>
-
-        <a class="social-link" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">
-         
-          <span class="social-label">LinkedIn</span>
-        </a>
-
-        <a class="social-link" href="https://github.com/yourusername" target="_blank" rel="noopener">
-         
-          <span class="social-label">GitHub</span>
-        </a>
+      <nav class="footer-social">
+        <a class="social-link" href="#">Twitter</a>
+        <a class="social-link" href="#">LinkedIn</a>
+        <a class="social-link" href="#">GitHub</a>
       </nav>
-
     </div>
   </footer>
 
   <script>
-    const y = new Date().getFullYear();
-    document.getElementById("yearTop").textContent = y;
-    document.getElementById("yearFooter").textContent = y;
+    // YEAR
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // THEME TOGGLE
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+
+    // Load saved theme
+    const saved = localStorage.getItem("theme");
+    if (saved) root.setAttribute("data-theme", saved);
+
+    toggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
   </script>
 
 </body>
