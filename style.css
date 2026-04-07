@@ -274,7 +274,7 @@ a:focus-visible{
 }
 
 /* =========================
-   PROFILE CARD
+   PROFILE CARD (UPDATED)
 ========================= */
 .profile-card{
   background: var(--card);
@@ -284,11 +284,16 @@ a:focus-visible{
   box-shadow: var(--shadow);
   position: sticky;
   top: 86px;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-top{
   display:flex;
-  justify-content:flex-start;
+  justify-content:center;
   margin-bottom: 12px;
 }
 
@@ -296,23 +301,23 @@ a:focus-visible{
   width: 86px;
   height: 86px;
   border-radius: 999px;
-  border: 2px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  background: var(--accent);
   display: grid;
   place-items: center;
-  background: transparent;
+  border: none;
 }
 
 .avatar-inner{
   width: 72px;
   height: 72px;
   border-radius: 999px;
-  border: 2px solid color-mix(in srgb, var(--accent) 45%, var(--border));
+  background: var(--accent);
   display: grid;
   place-items: center;
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: var(--accent);
-  background: rgba(255,255,255,0.65);
+  color: white;
+  border: none;
 }
 
 .profile-name{
@@ -329,7 +334,7 @@ a:focus-visible{
 }
 
 /* =========================
-   FOOTER
+   FOOTER (UPDATED)
 ========================= */
 .footer{
   border-top: 1px solid var(--border);
@@ -349,7 +354,7 @@ a:focus-visible{
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
-  margin-left: auto;   /* ← FIX: pushes icons to the right */
+  margin-left: auto; /* pushes icons to the right */
 }
 
 .social-link{
@@ -365,10 +370,6 @@ a:focus-visible{
 
 .social-link:hover{
   opacity: 0.85;
-}
-
-.social-label{
-  text-decoration: none;
 }
 
 /* =========================
