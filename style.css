@@ -274,7 +274,7 @@ a:focus-visible{
 }
 
 /* =========================
-   PROFILE CARD (UNCHANGED — YOUR PREVIOUS AM CARD)
+   PROFILE CARD
 ========================= */
 .profile-card{
   background: var(--card);
@@ -292,7 +292,6 @@ a:focus-visible{
   margin-bottom: 12px;
 }
 
-/* Outer circle */
 .avatar-outer{
   width: 86px;
   height: 86px;
@@ -303,7 +302,6 @@ a:focus-visible{
   background: transparent;
 }
 
-/* Inner circle */
 .avatar-inner{
   width: 72px;
   height: 72px;
@@ -330,23 +328,18 @@ a:focus-visible{
   margin-top: 6px;
 }
 
-.profile-copyright{
-  margin-top: 10px;
-  font-size: 13px;
-}
-
 /* =========================
-   FOOTER (SMALL + ALIGNED + ICONS + LABELS)
+   FOOTER
 ========================= */
 .footer{
   border-top: 1px solid var(--border);
-  padding: 12px 0;     /* small */
+  padding: 12px 0;
   margin-top: 28px;
 }
 
 .footer-row{
   display: flex;
-  align-items: center; /* align perfectly */
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
 }
@@ -356,6 +349,7 @@ a:focus-visible{
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
+  margin-left: auto;   /* ← FIX: pushes icons to the right */
 }
 
 .social-link{
@@ -366,28 +360,20 @@ a:focus-visible{
   font-weight: 800;
   color: var(--accent);
   line-height: 1;
-  padding: 4px 0; /* keeps footer short */
+  padding: 4px 0;
 }
 
 .social-link:hover{
   opacity: 0.85;
 }
 
-.social-icon{
-  width: 14px;   /* small icon */
-  height: 14px;
-  display: block;
-  flex: 0 0 auto;
-}
-
 .social-label{
   text-decoration: none;
 }
 
-.footer-left{
-  line-height: 1;
-}
-
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 860px){
   .card-grid{ grid-template-columns: 1fr; }
   .about-grid{ grid-template-columns: 1fr; }
