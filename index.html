@@ -27,7 +27,11 @@
       <button id="themeToggle" class="theme-toggle">Light / Dark</button>
 
       <!-- MOBILE MENU BUTTON -->
-      <button class="menu-btn" id="menuBtn">☰</button>
+      <button class="menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
 
@@ -76,7 +80,6 @@
         <p class="resume-handle">@aunmirza</p>
 
         <div class="resume-actions">
-          <!-- update file name if needed -->
           <a href="Aun%20Mirza.pdf" class="btn-view">View Resume</a>
           <a href="Aun%20Mirza.pdf" download class="btn-download">Download PDF</a>
         </div>
@@ -201,6 +204,15 @@
 
     menuBtn.addEventListener("click", () => {
       mobileNav.classList.toggle("show");
+    });
+
+    const header = document.querySelector(".header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
     });
   </script>
 
