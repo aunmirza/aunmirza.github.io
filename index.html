@@ -22,7 +22,6 @@
         <a href="contact.html">Contact</a>
       </nav>
 
-      <!-- THEME TOGGLE -->
       <button id="themeToggle" class="theme-toggle">Light / Dark</button>
 
     </div>
@@ -49,6 +48,24 @@
         <span class="pill soft">Data Science</span>
         <span class="pill soft">Oracle APEX</span>
         <span class="pill soft">Automation</span>
+      </div>
+    </section>
+
+    <!-- RESUME CARD -->
+    <section class="resume-wrapper">
+      <div class="resume-card">
+        <div class="resume-avatar">
+          <div class="resume-initials">AM</div>
+        </div>
+
+        <h2 class="resume-name">Aun Mirza</h2>
+        <p class="resume-role">Data Engineering • Data Science • Oracle APEX</p>
+        <p class="resume-handle">@aunmirza</p>
+
+        <div class="resume-actions">
+          <a href="resume.html" class="btn-view">View Resume</a>
+          <a href="resume.pdf" download class="btn-download">Download PDF</a>
+        </div>
       </div>
     </section>
 
@@ -159,14 +176,11 @@
   </footer>
 
   <script>
-    // YEAR
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // THEME TOGGLE
     const root = document.documentElement;
     const toggle = document.getElementById("themeToggle");
 
-    // Load saved theme
     const saved = localStorage.getItem("theme");
     if (saved) root.setAttribute("data-theme", saved);
 
