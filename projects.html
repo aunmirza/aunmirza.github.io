@@ -1,28 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Aun</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Aun Mirza</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<nav>
-    <div class="logo">AUN</div>
-    <div class="nav-links">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-row">
+
+      <a class="brand" href="index.html">@aunmirza</a>
+
+      <nav class="nav desktop-nav">
         <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
+        <a href="projects.html" class="active">Projects</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
-    </div>
-</nav>
+      </nav>
 
-<section class="hero">
-    <h1>Projects</h1>
-    <p>Coming soon — Oracle APEX apps, dashboards, workflows.</p>
-</section>
+      <button id="themeToggle" class="theme-toggle">Light / Dark</button>
+      <button class="menu-btn" id="menuBtn">☰</button>
+
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <p class="muted">Selected Work</p>
+      <h1 class="hero-title">
+        Projects & <span>Case Studies</span>
+      </h1>
+      <p class="subtitle">
+        A collection of applications, data pipelines, and dashboards I’ve built using
+        Oracle APEX, SQL, PL/SQL, and modern data tooling.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="muted">We’ll refine and expand this section later.</p>
+      </div>
+
+      <section class="card-grid">
+        <article class="card">
+          <div class="card-icon">APEX</div>
+          <div class="card-text">
+            <h3>Approval Workflow System</h3>
+            <p>Multi‑level approval app with routing, notifications, and dashboards built in Oracle APEX.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">SQL</div>
+          <div class="card-text">
+            <h3>Data Warehouse Pipeline</h3>
+            <p>ETL pipeline consolidating data from multiple sources into a central warehouse.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">ML</div>
+          <div class="card-text">
+            <h3>Predictive Analytics Model</h3>
+            <p>Machine learning model to forecast key business metrics using historical data.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">BI</div>
+          <div class="card-text">
+            <h3>Executive Dashboard</h3>
+            <p>Interactive dashboard with KPIs, filters, and drill‑downs for leadership teams.</p>
+          </div>
+        </article>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <span class="muted small">© <span id="year"></span> Aun — All rights reserved.</span>
+
+      <nav class="footer-social">
+        <a class="social-link" href="#">Twitter</a>
+        <a class="social-link" href="#">LinkedIn</a>
+        <a class="social-link" href="#">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+
+    const saved = localStorage.getItem("theme");
+    if (saved) root.setAttribute("data-theme", saved);
+
+    toggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    menuBtn.addEventListener("click", () => {
+      mobileNav.classList.toggle("show");
+    });
+  </script>
 
 </body>
 </html>
