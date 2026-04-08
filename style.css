@@ -1,6 +1,4 @@
-/* =========================================
-   THEME TOKENS (LIGHT + DARK)
-========================================= */
+/* THEME TOKENS */
 :root {
   --bg: #fcfbf9;
   --text: #111827;
@@ -18,7 +16,6 @@
   --max: 1200px;
 }
 
-/* DARK THEME */
 [data-theme="dark"] {
   --bg: #0f172a;
   --text: #f1f5f9;
@@ -27,9 +24,7 @@
   --card: #111827;
 }
 
-/* =========================================
-   GLOBAL
-========================================= */
+/* GLOBAL */
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -51,9 +46,7 @@ a { color: inherit; text-decoration: none; }
 .muted { color: var(--muted); }
 .small { font-size: 12px; }
 
-/* =========================================
-   HEADER
-========================================= */
+/* HEADER */
 .header {
   position: sticky;
   top: 0;
@@ -104,9 +97,40 @@ a { color: inherit; text-decoration: none; }
   font-size: 12px;
 }
 
-/* =========================================
-   HERO
-========================================= */
+/* MOBILE HEADER */
+.menu-btn {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  padding: 10px 0;
+}
+
+.mobile-nav a {
+  padding: 12px 20px;
+  font-weight: 700;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-nav a:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav.show {
+  display: flex;
+}
+
+/* HERO */
 .hero {
   padding: 60px 0 30px;
 }
@@ -148,9 +172,7 @@ a { color: inherit; text-decoration: none; }
   border-color: rgba(56,189,248,.3);
 }
 
-/* =========================================
-   RESUME CARD
-========================================= */
+/* RESUME CARD */
 .resume-wrapper {
   display: flex;
   justify-content: center;
@@ -235,9 +257,15 @@ a { color: inherit; text-decoration: none; }
   color: var(--text);
 }
 
-/* =========================================
-   CARDS
-========================================= */
+/* CARDS */
+.section {
+  padding-bottom: 40px;
+}
+
+.section-head h2 {
+  margin-bottom: 4px;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -283,16 +311,14 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
 }
 
-/* =========================================
-   ABOUT
-========================================= */
+/* ABOUT */
 .about {
   padding: 40px 0 70px;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1fr;
   gap: 28px;
 }
 
@@ -326,43 +352,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 12px;
 }
 
-/* PROFILE CARD */
-.profile-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px;
-  text-align: center;
-}
-
-.avatar-outer {
-  width: 86px;
-  height: 86px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-orange));
-  display: grid;
-  place-items: center;
-}
-
-.avatar-inner {
-  width: 72px;
-  height: 72px;
-  border-radius: 999px;
-  background: var(--card);
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-  color: var(--accent-blue);
-}
-
-.profile-role {
-  margin-top: 10px;
-  color: var(--muted);
-}
-
-/* =========================================
-   FOOTER
-========================================= */
+/* FOOTER */
 .footer {
   border-top: 1px solid var(--border);
   padding: 14px 0;
@@ -384,17 +374,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent-blue);
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
-@media (max-width: 860px) {
-  .card-grid { grid-template-columns: 1fr; }
-  .about-grid { grid-template-columns: 1fr; }
-}
-
-/* =========================================
-   BLOG LAYOUT
-========================================= */
+/* BLOG LAYOUT */
 .blog-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -408,7 +388,6 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 20px;
 }
 
-/* BLOG GRID */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -519,14 +498,19 @@ a { color: inherit; text-decoration: none; }
 
 /* RESPONSIVE */
 @media (max-width: 860px) {
+  .desktop-nav {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
   .blog-layout {
     grid-template-columns: 1fr;
   }
-
   .blog-grid {
     grid-template-columns: 1fr;
   }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
-
-
-
