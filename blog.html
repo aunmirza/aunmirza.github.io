@@ -15,7 +15,7 @@
 
       <a class="brand" href="index.html">@aunmirza</a>
 
-      <nav class="nav">
+      <nav class="nav desktop-nav">
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="blog.html" class="active">Blog</a>
@@ -23,8 +23,16 @@
       </nav>
 
       <button id="themeToggle" class="theme-toggle">Light / Dark</button>
+      <button class="menu-btn" id="menuBtn">☰</button>
 
     </div>
+
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <main class="container blog-layout">
@@ -36,7 +44,6 @@
 
       <div class="blog-grid">
 
-        <!-- POST 1 -->
         <article class="blog-card">
           <img src="https://picsum.photos/600/400?random=1" class="blog-thumb">
           <div class="blog-content">
@@ -47,7 +54,6 @@
           </div>
         </article>
 
-        <!-- POST 2 -->
         <article class="blog-card">
           <img src="https://picsum.photos/600/400?random=2" class="blog-thumb">
           <div class="blog-content">
@@ -58,7 +64,6 @@
           </div>
         </article>
 
-        <!-- POST 3 -->
         <article class="blog-card">
           <img src="https://picsum.photos/600/400?random=3" class="blog-thumb">
           <div class="blog-content">
@@ -69,7 +74,6 @@
           </div>
         </article>
 
-        <!-- POST 4 -->
         <article class="blog-card">
           <img src="https://picsum.photos/600/400?random=4" class="blog-thumb">
           <div class="blog-content">
@@ -80,7 +84,6 @@
           </div>
         </article>
 
-        <!-- POST 5 -->
         <article class="blog-card">
           <img src="https://picsum.photos/600/400?random=5" class="blog-thumb">
           <div class="blog-content">
@@ -91,7 +94,6 @@
           </div>
         </article>
 
-        <!-- POST 6 -->
         <article class="blog-card">
           <img src="https://picsum.photos/600/400?random=6" class="blog-thumb">
           <div class="blog-content">
@@ -108,13 +110,11 @@
     <!-- RIGHT: SIDEBAR -->
     <aside class="sidebar">
 
-      <!-- SEARCH -->
       <div class="sidebar-box">
         <h3>Search</h3>
         <input type="text" class="search-input" placeholder="Search posts...">
       </div>
 
-      <!-- CATEGORIES -->
       <div class="sidebar-box">
         <h3>Categories</h3>
         <ul class="sidebar-list">
@@ -126,7 +126,6 @@
         </ul>
       </div>
 
-      <!-- TAGS -->
       <div class="sidebar-box">
         <h3>Tags</h3>
         <div class="sidebar-tags">
@@ -139,7 +138,6 @@
         </div>
       </div>
 
-      <!-- RECENT POSTS -->
       <div class="sidebar-box">
         <h3>Recent Posts</h3>
         <ul class="sidebar-list">
@@ -153,7 +151,6 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-row">
       <span class="muted small">© <span id="year"></span> Aun — All rights reserved.</span>
@@ -180,6 +177,13 @@
       const next = current === "light" ? "dark" : "light";
       root.setAttribute("data-theme", next);
       localStorage.setItem("theme", next);
+    });
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    menuBtn.addEventListener("click", () => {
+      mobileNav.classList.toggle("show");
     });
   </script>
 
