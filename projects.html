@@ -23,7 +23,12 @@
       </nav>
 
       <button id="themeToggle" class="theme-toggle">Light / Dark</button>
-      <button class="menu-btn" id="menuBtn">☰</button>
+
+      <button class="menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
 
@@ -124,6 +129,15 @@
 
     menuBtn.addEventListener("click", () => {
       mobileNav.classList.toggle("show");
+    });
+
+    const header = document.querySelector(".header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
     });
   </script>
 
