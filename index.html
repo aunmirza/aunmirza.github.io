@@ -15,16 +15,29 @@
 
       <a class="brand" href="index.html">@aunmirza</a>
 
-      <nav class="nav">
+      <!-- DESKTOP NAV -->
+      <nav class="nav desktop-nav">
         <a href="index.html" class="active">Home</a>
         <a href="projects.html">Projects</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
 
+      <!-- THEME TOGGLE -->
       <button id="themeToggle" class="theme-toggle">Light / Dark</button>
 
+      <!-- MOBILE MENU BUTTON -->
+      <button class="menu-btn" id="menuBtn">☰</button>
+
     </div>
+
+    <!-- MOBILE NAV -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html" class="active">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <main class="container">
@@ -63,9 +76,9 @@
         <p class="resume-handle">@aunmirza</p>
 
         <div class="resume-actions">
-         <a href="Aun%20Mirza.pdf" class="btn-view">View Resume</a>
-<a href="Aun%20Mirza.pdf" download class="btn-download">Download PDF</a>
-
+          <!-- update file name if needed -->
+          <a href="Aun%20Mirza.pdf" class="btn-view">View Resume</a>
+          <a href="Aun%20Mirza.pdf" download class="btn-download">Download PDF</a>
         </div>
       </div>
     </section>
@@ -149,8 +162,6 @@
           </div>
         </div>
 
-       
-
       </div>
     </section>
 
@@ -183,6 +194,13 @@
       const next = current === "light" ? "dark" : "light";
       root.setAttribute("data-theme", next);
       localStorage.setItem("theme", next);
+    });
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    menuBtn.addEventListener("click", () => {
+      mobileNav.classList.toggle("show");
     });
   </script>
 
