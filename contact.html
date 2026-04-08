@@ -1,30 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Aun</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Aun Mirza</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: #fcfbf9;
+      color: #111827;
+    }
+    .contact-container {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+    .contact-title {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .contact-sub {
+      color: #6b7280;
+      margin-bottom: 30px;
+    }
+    .contact-box {
+      background: white;
+      border: 1px solid #e5e7eb;
+      padding: 24px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+    }
+    .contact-box h3 {
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .contact-info p {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+    .contact-info a {
+      color: #2596be;
+      font-weight: 600;
+    }
+    .social-links {
+      display: flex;
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .social-links a {
+      padding: 8px 14px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      transition: .2s;
+    }
+    .social-links a:hover {
+      background: #2596be;
+      color: white;
+    }
+    /* FORM */
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+    .contact-form button {
+      padding: 12px 20px;
+      background: #2596be;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s;
+    }
+    .contact-form button:hover {
+      background: #1f7fa0;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-    <div class="logo">AUN</div>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </div>
-</nav>
+  <div class="contact-container">
 
-<section class="hero">
-    <h1>Contact Me</h1>
-    <p>Email: your-email@example.com</p>
-    <p>LinkedIn: your-link</p>
-    <p>GitHub: github.com/aunmirza</p>
-</section>
+    <h1 class="contact-title">Contact Me</h1>
+    <p class="contact-sub">Feel free to reach out anytime — I usually reply within a day.</p>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-box contact-info">
+      <h3>My Information</h3>
+
+      <p><strong>Phone:</strong> <a href="tel:+1234567890">+123 456 7890</a></p>
+      <p><strong>Email:</strong> <a href="mailto:yourgmail@gmail.com">yourgmail@gmail.com</a></p>
+
+      <h3 style="margin-top:20px;">Social Links</h3>
+      <div class="social-links">
+        <a href="https://fiverr.com/yourprofile" target="_blank">Fiverr</a>
+        <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+        <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+        <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="contact-box">
+      <h3>Send Me a Message</h3>
+
+      <form class="contact-form" action="https://formsubmit.co/yourgmail@gmail.com" method="POST">
+
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
 
 </body>
 </html>
