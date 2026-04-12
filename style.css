@@ -97,6 +97,16 @@ a { color: inherit; text-decoration: none; }
   font-size: 12px;
 }
 
+/* FIX ADDED — theme toggle visible in dark mode */
+[data-theme="dark"] .theme-toggle {
+  color: #ffffff !important;
+  border-color: #ffffff;
+  background: #1e293b;
+}
+[data-theme="dark"] .theme-toggle:hover {
+  background: #334155;
+}
+
 /* MOBILE MENU BUTTON (3-line hamburger) */
 .menu-btn {
   display: none;
@@ -114,6 +124,11 @@ a { color: inherit; text-decoration: none; }
   background: var(--text);
   border-radius: 4px;
   transition: .3s;
+}
+
+/* FIX ADDED — hamburger lines visible in dark mode */
+[data-theme="dark"] .menu-btn span {
+  background: #ffffff;
 }
 
 /* MOBILE NAV DROPDOWN */
