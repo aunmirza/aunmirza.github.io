@@ -1,73 +1,186 @@
-<section class="card-grid">
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Aun Mirza</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  <!-- HR DASHBOARD -->
-  <article class="card">
-    <div class="card-icon">HR</div>
-    <div class="card-text">
-      <h3>HR Analytics Dashboard</h3>
-      <p>Attendance, payroll summaries, leave tracking, and workforce insights built in Oracle APEX.</p>
-      <a href="#" class="social-link">Live Demo →</a>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-row">
+
+      <a class="brand" href="index.html">@aunmirza</a>
+
+      <nav class="nav desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <button id="themeToggle" class="theme-toggle">Light / Dark</button>
+
+      <button class="menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
     </div>
-  </article>
 
-  <!-- ATTENDANCE SYSTEM -->
-  <article class="card">
-    <div class="card-icon">ATD</div>
-    <div class="card-text">
-      <h3>Attendance Management System</h3>
-      <p>Automated check‑ins, approval routing, audit logs, and real‑time attendance reporting.</p>
-      <a href="#" class="social-link">Live Demo →</a>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <p class="muted">Selected Work</p>
+      <h1 class="hero-title">
+        Projects & <span>Case Studies</span>
+      </h1>
+      <p class="subtitle">
+        A collection of applications, data pipelines, and dashboards I’ve built using
+        Oracle APEX, SQL, PL/SQL, and modern data tooling.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="muted">A curated list of systems, dashboards, and tools I’ve built.</p>
+      </div>
+
+      <!-- UPDATED PROJECTS GRID -->
+      <section class="card-grid">
+
+        <!-- HR DASHBOARD -->
+        <article class="card">
+          <div class="card-icon">HR</div>
+          <div class="card-text">
+            <h3>HR Analytics Dashboard</h3>
+            <p>Attendance, payroll summaries, leave tracking, and workforce insights built in Oracle APEX.</p>
+            <a href="#" class="social-link">Live Demo →</a>
+          </div>
+        </article>
+
+        <!-- ATTENDANCE SYSTEM -->
+        <article class="card">
+          <div class="card-icon">ATD</div>
+          <div class="card-text">
+            <h3>Attendance Management System</h3>
+            <p>Automated check‑ins, approval routing, audit logs, and real‑time attendance reporting.</p>
+            <a href="#" class="social-link">Live Demo →</a>
+          </div>
+        </article>
+
+        <!-- FINANCIAL DASHBOARD -->
+        <article class="card">
+          <div class="card-icon">FIN</div>
+          <div class="card-text">
+            <h3>Financial Performance Dashboard</h3>
+            <p>Revenue, expenses, cash flow, and KPI tracking using optimized SQL models.</p>
+            <a href="#" class="social-link">Live Demo →</a>
+          </div>
+        </article>
+
+        <!-- MEDICINE STOCK -->
+        <article class="card">
+          <div class="card-icon">MED</div>
+          <div class="card-text">
+            <h3>Medicine Stock Dashboard</h3>
+            <p>Inventory levels, expiry alerts, supplier performance, and consumption analytics.</p>
+            <a href="#" class="social-link">Live Demo →</a>
+          </div>
+        </article>
+
+        <!-- ML REGRESSION APP -->
+        <article class="card">
+          <div class="card-icon">ML</div>
+          <div class="card-text">
+            <h3>Machine Learning Regression App</h3>
+            <p>Upload a dataset and view live regression results, charts, and model performance.</p>
+            <a href="#" class="social-link">Live Demo →</a>
+          </div>
+        </article>
+
+        <!-- PUBLIC TRANSIT DATA -->
+        <article class="card">
+          <div class="card-icon">ETL</div>
+          <div class="card-text">
+            <h3>Public Transit Data Explorer</h3>
+            <p>ETL pipelines and dashboards analyzing routes, delays, and passenger flow patterns.</p>
+            <a href="#" class="social-link">Live Demo →</a>
+          </div>
+        </article>
+
+        <!-- ENTERPRISE SUITE -->
+        <article class="card">
+          <div class="card-icon">OPS</div>
+          <div class="card-text">
+            <h3>Enterprise Operations Suite</h3>
+            <p>A unified platform combining HR, finance, inventory, ML insights, and workflow automation.</p>
+            <a href="#" class="social-link">Live Demo →</a>
+          </div>
+        </article>
+
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <span class="muted small">© <span id="year"></span> Aun — All rights reserved.</span>
+
+      <nav class="footer-social">
+        <a class="social-link" href="https://www.instagram.com/aunmrizich/">Instagram</a>
+        <a class="social-link" href="www.linkedin.com/in/aun-mirza-247762175">LinkedIn</a>
+        <a class="social-link" href="https://github.com/aunmirza">GitHub</a>
+      </nav>
     </div>
-  </article>
+  </footer>
 
-  <!-- FINANCIAL DASHBOARD -->
-  <article class="card">
-    <div class="card-icon">FIN</div>
-    <div class="card-text">
-      <h3>Financial Performance Dashboard</h3>
-      <p>Revenue, expenses, cash flow, and KPI tracking using optimized SQL models.</p>
-      <a href="#" class="social-link">Live Demo →</a>
-    </div>
-  </article>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  <!-- MEDICINE STOCK -->
-  <article class="card">
-    <div class="card-icon">MED</div>
-    <div class="card-text">
-      <h3>Medicine Stock Dashboard</h3>
-      <p>Inventory levels, expiry alerts, supplier performance, and consumption analytics.</p>
-      <a href="#" class="social-link">Live Demo →</a>
-    </div>
-  </article>
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
 
-  <!-- ML REGRESSION APP -->
-  <article class="card">
-    <div class="card-icon">ML</div>
-    <div class="card-text">
-      <h3>Machine Learning Regression App</h3>
-      <p>Upload a dataset and view live regression results, charts, and model performance.</p>
-      <a href="#" class="social-link">Live Demo →</a>
-    </div>
-  </article>
+    const saved = localStorage.getItem("theme");
+    if (saved) root.setAttribute("data-theme", saved);
 
-  <!-- PUBLIC TRANSIT DATA -->
-  <article class="card">
-    <div class="card-icon">ETL</div>
-    <div class="card-text">
-      <h3>Public Transit Data Explorer</h3>
-      <p>ETL pipelines and dashboards analyzing routes, delays, and passenger flow patterns.</p>
-      <a href="#" class="social-link">Live Demo →</a>
-    </div>
-  </article>
+    toggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+    });
 
-  <!-- ENTERPRISE SUITE -->
-  <article class="card">
-    <div class="card-icon">OPS</div>
-    <div class="card-text">
-      <h3>Enterprise Operations Suite</h3>
-      <p>A unified platform combining HR, finance, inventory, ML insights, and workflow automation.</p>
-      <a href="#" class="social-link">Live Demo →</a>
-    </div>
-  </article>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
 
-</section>
+    menuBtn.addEventListener("click", () => {
+      mobileNav.classList.toggle("show");
+    });
+
+    const header = document.querySelector(".header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 10) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>
